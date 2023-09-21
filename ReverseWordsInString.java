@@ -29,7 +29,7 @@ class Solution {
             String []str=s.trim().split("\\s+");
             StringBuilder sb=new StringBuilder();
             for(int i=str.length-1;i>=0;i--){
-                sb.append(splitted[i]);
+                sb.append(str[i]);
                 if(i!=0){
                     sb.append(" ");
                 }
