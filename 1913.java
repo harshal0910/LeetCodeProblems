@@ -48,3 +48,5 @@ class Solution {
       return (max1*max2)-(min1*min2);
     }
 }
+
+// We can also sort this array And return product difference of last two elements and first two elements
