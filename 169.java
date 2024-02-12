@@ -44,9 +44,27 @@ Output: 2
 //         return foundKey;
 //     }
 // }
+
+
+// class Solution {
+//     public int majorityElement(int[] nums) {
+//         Arrays.sort(nums);
+//         return nums[nums.length/2];
+//     }
+// }
 class Solution {
     public int majorityElement(int[] nums) {
-        Arrays.sort(nums);
-        return nums[nums.length/2];
+       int max=0;
+       int ans=0;
+       Map<Integer,Integer> map = new HashMap<>();
+       for(int i=0;i<nums.length;i++){
+           map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+           int count = map.get(nums[i]);
+           if(count>max){
+               max=count;
+               ans=nums[i];
+           }
+       }
+       return ans; 
     }
 }
